@@ -363,6 +363,24 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
     }
 
     /**
+     * Determine if one or more items pass a truth test.
+     *
+     * @param callable $callback
+     *
+     * @return bool
+     */
+    public function some(callable $callback): bool
+    {
+        foreach ($this->items as $key => $value) {
+            if ($callback($value, $key) === true) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Get the item values.
      *
      * @return static

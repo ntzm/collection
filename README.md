@@ -59,6 +59,7 @@ $c = new Collection();
 - [`reduce`](#reduce)
 - [`reverse`](#reverse)
 - [`slice`](#slice)
+- [`some`](#some)
 - [`values`](#values)
 - [`without`](#without)
 
@@ -432,6 +433,32 @@ $c = new Collection([1, 2, 3, 4, 5, 6]);
 
 $c->slice(2, 2);
 // Collection([2 => 3, 3 => 4])
+```
+
+### `some`
+
+Determine if one or more of the items passes a truth test.
+
+```php
+$c = new Collection([1, 3, 5, 6, 7, 9]);
+
+$c->some(function (int $number) {
+    return $number % 2 === 0;
+});
+// true
+
+$c->some(function (int $number) {
+    return $number > 10;
+});
+// false
+```
+
+You can access the key of the current item with the second parameter:
+
+```php
+$c->some(function ($value, $key) {
+    //
+});
 ```
 
 ### `values`
