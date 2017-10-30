@@ -52,7 +52,7 @@ $c = new Collection();
 - [`has`](#has)
 - [`implode`](#implode)
 - [`intersect`](#intersect)
-- [`isEmpty`](#isEmpty)
+- [`isEmpty`](#isempty)
 - [`keys`](#keys)
 - [`last`](#last)
 - [`map`](#map)
