@@ -1,5 +1,7 @@
 # Collection
 
+[![Build Status](https://travis-ci.org/ntzm/collection.svg?branch=master)](https://travis-ci.org/ntzm/collection)
+
 A fast and simple PHP 7.1+ collection library.
 
 ## Installation
