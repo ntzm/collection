@@ -135,11 +135,13 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
      * Get the first item.
      *
      * @return mixed
+     *
+     * @throws EmptyCollectionException
      */
     public function first()
     {
-        if (empty($this->items)) {
-            return null;
+        if ($this->isEmpty()) {
+            throw new EmptyCollectionException();
         }
 
         return \reset($this->items);
@@ -247,11 +249,13 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
      * Get the last item.
      *
      * @return mixed
+     *
+     * @throws EmptyCollectionException
      */
     public function last()
     {
-        if (empty($this->items)) {
-            return null;
+        if ($this->isEmpty()) {
+            throw new EmptyCollectionException();
         }
 
         return \end($this->items);

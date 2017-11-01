@@ -232,14 +232,7 @@ $c->first();
 // 1
 ```
 
-If the collection is empty, `first` will return `null`:
-
-```php
-$c = new Collection([]);
-
-$c->first();
-// null
-```
+If the collection is empty, `first` will throw an `EmptyCollectionException`.
 
 ### `get`
 
@@ -355,6 +348,8 @@ $c = new Collection([1, 2, 3, 4, 5]);
 $c->last();
 // 5
 ```
+
+If the collection is empty, `last` will throw an `EmptyCollectionException`.
 
 ### `map`
 

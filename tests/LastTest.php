@@ -1,6 +1,7 @@
 <?php
 
 use Ntzm\Collection\Collection;
+use Ntzm\Collection\EmptyCollectionException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -19,6 +20,8 @@ class LastTest extends TestCase
     {
         $collection = new Collection();
 
-        $this->assertNull($collection->last());
+        $this->expectException(EmptyCollectionException::class);
+
+        $collection->last();
     }
 }
