@@ -381,6 +381,16 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
     }
 
     /**
+     * Get the sum of the items.
+     *
+     * @return float|int
+     */
+    public function sum()
+    {
+        return \array_sum($this->items);
+    }
+
+    /**
      * Get the item values.
      *
      * @return static

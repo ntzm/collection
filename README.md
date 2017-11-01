@@ -60,6 +60,7 @@ $c = new Collection();
 - [`reverse`](#reverse)
 - [`slice`](#slice)
 - [`some`](#some)
+- [`sum`](#sum)
 - [`values`](#values)
 - [`without`](#without)
 
@@ -459,6 +460,17 @@ You can access the key of the current item with the second parameter:
 $c->some(function ($value, $key) {
     //
 });
+```
+
+### `sum`
+
+Get a sum of the items.
+
+```php
+$c = new Collection([1, 2, 3, 4, 5]);
+
+$c->sum();
+// 15
 ```
 
 ### `values`
