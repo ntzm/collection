@@ -34,6 +34,22 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
     }
 
     /**
+     * Get the average value of the items.
+     *
+     * @return float|int
+     *
+     * @throws EmptyCollectionException
+     */
+    public function average()
+    {
+        if ($this->isEmpty()) {
+            throw new EmptyCollectionException();
+        }
+
+        return $this->sum() / $this->count();
+    }
+
+    /**
      * Break items into chunks of a given size.
      *
      * @param int $size

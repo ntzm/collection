@@ -41,6 +41,7 @@ $c = new Collection();
 ## Methods
 
 - [`all`](#all)
+- [`average`](#average)
 - [`chunk`](#chunk)
 - [`count`](#count)
 - [`diff`](#diff)
@@ -74,6 +75,19 @@ $c = new Collection([1, 2, 3]);
 $c->all();
 // [1, 2, 3]
 ```
+
+### `average`
+
+Get the average value of the items.
+
+```php
+$c = new Collection([1, 5, 7, 10]);
+
+$c->average();
+// 5.75
+```
+
+If the collection is empty, `average` will throw an `EmptyCollectionException`.
 
 ### `chunk`
 
